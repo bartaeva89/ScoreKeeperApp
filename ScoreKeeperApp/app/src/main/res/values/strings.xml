@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ScoreKeeperApp</string>
+    <string name="reset_text">reset</string>
+    <string name="team_a_text">team A</string>
+    <string name="team_b_text">team B</string>
+    <string name="plusz">Good</string>
+    <string name="zero">Pass</string>
+    <string name="minus">Bad</string>
+    <string name="base">0</string>
+</resources>
