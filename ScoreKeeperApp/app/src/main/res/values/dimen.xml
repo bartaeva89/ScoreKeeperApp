@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="line">20dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="margin_little">4dp</dimen>
+    <dimen name="textSizeLittle">14sp</dimen>
+    <dimen name="textSizeLarge">56sp</dimen>
 </resources>

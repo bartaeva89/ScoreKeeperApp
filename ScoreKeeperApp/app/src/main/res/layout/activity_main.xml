@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.scorekeeperapp.MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,28 +13,31 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/team_a_text"/>
+               style="@style/TextView"
+                android:text="@string/team_a_text"
+                android:textSize="@dimen/textSizeLittle"/>
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/base"/>
+                android:id="@+id/team_a_score"
+                style="@style/TextView"
+                android:text="@string/base"
+                android:textSize="@dimen/textSizeLarge"/>
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Button"
+                android:onClick="goodAnswerA"
                 android:text="@string/plusz"
                 />
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/zero"/>
+                style="@style/Button"
+                android:onClick="passA"
+                android:text="@string/zero"
+                />
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Button"
+                android:onClick="badAnswerA"
                 android:text="@string/minus"/>
         </LinearLayout>
         <View
@@ -43,38 +47,53 @@
             android:background="@android:color/darker_gray" />
 
         <LinearLayout
-            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/team_b_text"/>
+                style="@style/TextView"
+                android:text="@string/team_b_text"
+                android:textSize="@dimen/textSizeLittle"/>
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/base"/>
+                android:id="@+id/team_b_score"
+                style="@style/TextView"
+                android:text="@string/base"
+                android:textSize="@dimen/textSizeLarge"/>
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/plusz"
-                />
+                android:id="@+id/button"
+                style="@style/Button"
+                android:onClick="goodAnswerB"
+                android:text="@string/plusz"/>
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Button"
+                android:onClick="passB"
                 android:text="@string/zero"/>
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Button"
+                android:onClick="badAnswerB"
                 android:text="@string/minus"/>
         </LinearLayout>
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/tittle"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <Button
+        android:id="@+id/resetButton"
+        style="@style/Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="resetScore"
         android:text="@string/reset_text"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_above="@id/tittle"/>
+
+
 </RelativeLayout>
